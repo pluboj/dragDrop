@@ -1,0 +1,44 @@
+/** BUCKET LIST **/
+.drag-list {
+  background: #e5f1ff;
+}
+
+.draggable {
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: 30%;
+  padding: 8px;
+  margin: 4px;
+  background: #6af;
+  border: solid 1px #396cac;
+  color: #fff;
+  text-align: center;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.bucket-list {
+  border-collapse: collapse;
+}
+.bucket-list td {
+  box-sizing: border-box;
+  border: solid 1px #6693cc;
+  padding: 10px;
+  height: 60px;
+}
+.bucket-list td.droppable {
+  min-width: 400px;
+}
+.bucket-list th {
+  text-align: center;
+}
+/** /BUCKET LIST **/
+
+/** CONTAINER **/
+#container {
+  display: table;
+  margin: auto;
+}

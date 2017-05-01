@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Drag and drop</title>
+		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="jquery-ui.css">
+		
+		<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+		<script src="jquery-ui.js"></script>
+		<script src="index.js"></script>
+	</head>
+	<body>
+		<div id="container"></div>
+		<table>
+		<tbody>
+			<tr>
+				<td><label for="q4lo11_1">A</label></td>
+				<td><input type="text" id="q4lo11_1" name="q4lo11_1"></td>
+			</tr>
+			<tr>
+				<td><label for="q4lo11_2">B</label></td>
+				<td><input type="text" id="q4lo11_2" name="q4lo11_2"></td>
+			</tr>
+			<tr>
+				<td><label for="q4lo11_3">C</label></td>
+				<td><input type="text" id="q4lo11_3" name="q4lo11_3"></td>
+			</tr>
+			<tr>
+				<td><label for="q4lo11_4">D</label></td>
+				<td><input type="text" id="q4lo11_4" name="q4lo11_4"></td>
+			</tr>
+			<tr>
+				<td><label for="q4lo11_5">E</label></td>
+				<td><input type="text" id="q4lo11_5" name="q4lo11_5"></td>
+			</tr>
+			<tr>
+				<td><label for="q4lo11_6">F</label></td>
+				<td><input type="text" id="q4lo11_6" name="q4lo11_6"></td>
+			</tr>
+		</tbody>
+		</table>
+		
+
+		<script>
+			$(function() {
+				bucketList({
+					container: $('#container'),
+					rows: ['I <b>never</b> test for this', 'Tested first', 'Tested second', 'Tested third', 'Tested fourth', 'Tested fifth', 'Tested sixth'],
+					selector: 'input[id*="q4lo11_"]',
+					titleSelector: function(){
+	    				return $(this).closest('tr').find('label').first().html();
+  				},
+  					title: 'Drag biomarkers into the boxes below'
+				});
+			});
+		</script>
+	</body>
+</html>
